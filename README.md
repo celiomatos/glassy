@@ -25,3 +25,31 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+
+De <https://medium.com/letsboot/quick-start-with-angular-material-and-flex-layout-1b065aa1476c> 
+
+De <https://medium.com/letsboot/quick-start-with-angular-material-and-flex-layout-1b065aa1476c> 
+
+
+Modulo material
+Modulo fxlayout
+
+
+
+#instalacao
+1. baixe e instale o node.js
+2. npm install -g @angular/cli
+ng --version
+node --version
+
+#criando um novo projeto
+ng new glassy --routing --skip-tests --style=scss --prefix=gla
+
+####criacao de component
+ng g c core/layout/home
+ng g c page/login
+
+npm install --save @angular/material @angular/cdk @angular/animations
+npm install @angular/flex-layout
+
