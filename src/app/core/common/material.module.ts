@@ -1,4 +1,3 @@
-import { FlexLayoutModule } from '@angular/flex-layout';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {
@@ -10,12 +9,6 @@ import {
 
 @NgModule({
   imports: [CommonModule],
-  exports: [
-    FlexLayoutModule,
-    MatButtonModule,
-    MatCardModule,
-    MatSidenavModule,
-    MatIconModule
-  ]
+  exports: [MatButtonModule, MatCardModule, MatSidenavModule, MatIconModule]
 })
 export class MaterialModule {}

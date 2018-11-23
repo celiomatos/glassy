@@ -88,3 +88,21 @@ export class MaterialModule {}
 - ng generate core/layout
 
 ## importe COreModule in appModule e LayoutModule in CoreMOdule
+
+## Mudando app-routing para exibir home no inicio
+
+const routes: Routes = [
+  {
+    path: '',
+    component: HomeComponent
+  }
+];
+
+## LayoutModule
+- declare os component envolvidos
+
+@NgModule({
+  imports: [CommonModule],
+  declarations: [HomeComponent, SidenavComponent, MenuComponent]
+})
+export class LayoutModule {}
