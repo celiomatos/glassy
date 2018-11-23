@@ -26,30 +26,65 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
+De <https://medium.com/letsboot/quick-start-with-angular-material-and-flex-layout-1b065aa1476c>
 
-De <https://medium.com/letsboot/quick-start-with-angular-material-and-flex-layout-1b065aa1476c> 
-
-De <https://medium.com/letsboot/quick-start-with-angular-material-and-flex-layout-1b065aa1476c> 
-
+De <https://medium.com/letsboot/quick-start-with-angular-material-and-flex-layout-1b065aa1476c>
 
 Modulo material
 Modulo fxlayout
 
+## Instalacao
 
+- 1. baixe e instale o node.js
+- 2. npm install -g @angular/cli
+- 3. ng --version
+- 4. node --version
 
-#instalacao
-1. baixe e instale o node.js
-2. npm install -g @angular/cli
-ng --version
-node --version
+## Criando um novo projeto
 
-#criando um novo projeto
-ng new glassy --routing --skip-tests --style=scss --prefix=gla
+- 1. ng new glassy --routing --skip-tests --style=scss --prefix=gla
 
-####criacao de component
-ng g c core/layout/home
-ng g c page/login
+## Criacao de component
 
-npm install --save @angular/material @angular/cdk @angular/animations
-npm install @angular/flex-layout
+- criar pasta core/layout
 
+- ng g c core/layout/home
+- ng g c core/layout/menu
+- ng g c core/layout/sidenav
+
+- criar pasta page
+- ng g c page/login
+
+## Instalando Material and FlexLayout
+
+- npm install --save @angular/material @angular/cdk @angular/animations
+- npm install @angular/flex-layout
+
+## Estruturando
+
+- criar pasta core/common
+- crie um arquivo material.module.ts
+
+import { NgModule } from "@angular/core";
+import { CommonModule } from "@angular/common";
+import { FlexLayoutModule } from "@angular/flex-layout";
+import {
+MatButtonModule,
+MatCardModule,
+MatSidenavModule
+} from "@angular/material";
+
+@NgModule({
+imports: [CommonModule],
+exports: [FlexLayoutModule, MatButtonModule, MatCardModule, MatSidenavModule]
+})
+export class MaterialModule {}
+
+## fixOnSave: true para resolver double quote
+
+## Criando os modulos
+
+- ng g m core
+- ng generate core/layout
+
+## importe COreModule in appModule e LayoutModule in CoreMOdule
