@@ -92,17 +92,46 @@ export class MaterialModule {}
 ## Mudando app-routing para exibir home no inicio
 
 const routes: Routes = [
-  {
-    path: '',
-    component: HomeComponent
-  }
+
+{
+
+path: '',
+
+component: HomeComponent
+
+}
+
 ];
 
 ## LayoutModule
+
 - declare os component envolvidos
 
 @NgModule({
-  imports: [CommonModule],
-  declarations: [HomeComponent, SidenavComponent, MenuComponent]
+imports: [CommonModule],
+declarations: [HomeComponent, SidenavComponent, MenuComponent]
 })
 export class LayoutModule {}
+
+## Breakpoint mediaQuery
+
+- xs 'screen and (max-width: 599px)'
+- sm 'screen and (min-width: 600px) and (max-width: 959px)'
+- md 'screen and (min-width: 960px) and (max-width: 1279px)'
+- lg 'screen and (min-width: 1280px) and (max-width: 1919px)'
+- xl 'screen and (min-width: 1920px) and (max-width: 5000px)'
+
+## Extensions
+
+- Angular Language Service
+- Angular TypeScript Snippets for VS Code
+- angular2-switcher
+- Auto Close Tag
+- Auto Import
+- EditorConfig for Visual Studio Code
+- Path Intellisense
+- Prettier formatter for Visual Studio Code
+- Indented Sass syntax highlighting, autocomplete & snippets for VSCode
+- vscode-svgviewer
+- vscode-tslint
+- vscode-icons
