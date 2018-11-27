@@ -5,8 +5,15 @@ import { Routes, RouterModule } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    component: HomeComponent
-  }
+    component: HomeComponent,
+    children: [
+      {
+        path: 'login',
+        loadChildren: 'app/page/login/login.module#LoginModule'
+      }
+    ]
+  },
+  { path: '**', redirectTo: '' }
 ];
 
 @NgModule({

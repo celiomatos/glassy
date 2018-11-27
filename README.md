@@ -135,3 +135,24 @@ export class LayoutModule {}
 - vscode-svgviewer
 - vscode-tslint
 - vscode-icons
+
+# RouterModule and <router-outlet> in layout
+
+- layout.module.ts
+
+import { RouterModule } from '@angular/router';
+
+@NgModule({
+imports: [CommonModule, RouterModule, MaterialModule],
+declarations: [HomeComponent, SidenavComponent, MenuComponent]
+})
+export class LayoutModule {}
+
+- home.component.html
+  <div class="example-flex">
+    <router-outlet></router-outlet>
+  </div>
+
+## MatIconModule
+
+- inserir <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/> no index.html para poder funcionar os mat-icons
