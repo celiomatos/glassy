@@ -156,3 +156,57 @@ export class LayoutModule {}
 ## MatIconModule
 
 - inserir <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/> no index.html para poder funcionar os mat-icons
+
+## Criando as SinglePage
+
+- ng g c page/login
+- ng g m page/login
+
+## login.module.ts (observe o lazy loalding forChild)
+
+import { LoginComponent } from './login.component';
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Routes, RouterModule } from '@angular/router';
+
+const ROUTES: Routes = [
+  {
+    path: '',
+    component: LoginComponent
+  }
+];
+@NgModule({
+  imports: [CommonModule, RouterModule.forChild(ROUTES)],
+  exports: [RouterModule],
+  declarations: [LoginComponent]
+})
+export class LoginModule {}
+
+## Alterando o app-routing.module.ts para lazy loading
+
+import { HomeComponent } from './core/layout/home/home.component';
+import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
+
+const routes: Routes = [
+  {
+    path: '',
+    component: HomeComponent,
+    children: [
+      {
+        path: 'login',
+        loadChildren: './page/login/login.module#LoginModule'
+      }
+    ]
+  },
+  { path: '**', redirectTo: '' }
+];
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+export class AppRoutingModule {}
+
+
+## por <router-outlet></router-outlet> em home.component.html e app.component.html
