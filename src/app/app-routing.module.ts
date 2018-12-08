@@ -10,6 +10,10 @@ const routes: Routes = [
       {
         path: 'login',
         loadChildren: './page/login/login.module#LoginModule'
+      },
+      {
+        path: 'eleicao',
+        loadChildren: './page/eleicao/eleicao.module#EleicaoModule'
       }
     ]
   },

@@ -1,7 +1,8 @@
 <mat-drawer-container class="example-container" autosize>
   <mat-drawer #drawer class="example-sidenav" mode="side">
     <p>Auto-resizing sidenav</p>
-    <a routerLink="/login">Login</a>
+    <a routerLink="/eleicao"><p>Eleições</p></a>
+    <a routerLink="/login"><p>Login</p></a>
   </mat-drawer>
 
   <div class="example-sidenav-content">
@@ -9,5 +10,7 @@
     <mat-icon>home</mat-icon>
     <!-- <mat-icon>fullscreen</mat-icon> -->
   </div>
-  <div class="example-flex"><router-outlet></router-outlet></div>
+  <div class="example-flex">
+    <router-outlet></router-outlet>
+  </div>
 </mat-drawer-container>

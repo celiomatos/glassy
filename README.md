@@ -210,3 +210,26 @@ export class AppRoutingModule {}
 
 
 ## por <router-outlet></router-outlet> em home.component.html e app.component.html
+
+## Criado Component EleicaoComponent
+
+- ng g c page/eleicao
+- ng g m page/eleicao
+
+- acrescentar rota no app-routing.module
+path: '',
+    component: HomeComponent,
+    children: [
+      {
+        path: 'login',
+        loadChildren: './page/login/login.module#LoginModule'
+      },
+      {
+        path: 'eleicao',
+        loadChildren: './page/eleicao/eleicao.module#EleicaoModule'
+      }
+
+
+## se for criado referencia ao EleicaoComponent no app.module remova
+
+## acrescentado     MatTableModule, MatPaginatorModule ao material.module.ts
