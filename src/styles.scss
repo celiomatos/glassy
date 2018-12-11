@@ -1,25 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
-$default-background-color: rgba($color: #000000, $alpha: 0.7);
+$default-background-color: rgba(
+  $color: #000000,
+  $alpha: 0.7
+);
 
 body {
-  background: url("assets/background/bg.jpeg") no-repeat;
+  // background: url("assets/background/bg.jpeg") no-repeat;
   display: block;
-  background-size: cover;  
+  background-size: cover;
 }
-
 p {
   color: white;
 }
-
 table {
   width: 100%;
-  background-color: $default-background-color;   
+  background-color: $default-background-color;
 }
-
 mat-card {
-  background-color: $default-background-color;    
+  background-color: $default-background-color;
 }
-
 mat-icon {
   cursor: pointer;
 }

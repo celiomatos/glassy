@@ -4,13 +4,12 @@
     <a routerLink="/eleicao"><p>Eleições</p></a>
     <a routerLink="/login"><p>Login</p></a>
   </mat-drawer>
-
-  <div class="example-sidenav-content">
-    <mat-icon (click)="drawer.toggle()">menu</mat-icon>
-    <mat-icon>home</mat-icon>
-    <!-- <mat-icon>fullscreen</mat-icon> -->
-  </div>
-  <div class="example-flex">
-    <router-outlet></router-outlet>
-  </div>
+  <mat-drawer-content>
+    <div class="example-sidenav-content">
+      <mat-icon (click)="drawer.toggle()">menu</mat-icon>
+      <mat-icon>home</mat-icon>
+      <!-- <mat-icon>fullscreen</mat-icon> -->
+    </div>
+    <div class="example-flex"><router-outlet></router-outlet></div>
+  </mat-drawer-content>
 </mat-drawer-container>
