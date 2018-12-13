@@ -233,3 +233,5 @@ path: '',
 ## se for criado referencia ao EleicaoComponent no app.module remova
 
 ## acrescentado     MatTableModule, MatPaginatorModule ao material.module.ts
+
+## ng update @angular/cli @angular/core
