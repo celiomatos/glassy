@@ -1,15 +1,14 @@
-<mat-drawer-container class="example-container" autosize>
-  <mat-drawer #drawer class="example-sidenav" mode="side">
-    <p>Auto-resizing sidenav</p>
-    <a routerLink="/eleicao"><p>Eleições</p></a>
-    <a routerLink="/login"><p>Login</p></a>
-  </mat-drawer>
-  <mat-drawer-content>
-    <div class="example-sidenav-content">
-      <mat-icon (click)="drawer.toggle()">menu</mat-icon>
-      <mat-icon>home</mat-icon>
-      <!-- <mat-icon>fullscreen</mat-icon> -->
+<mat-sidenav-container class="example-container" (backdropClick)="close()">
+  <mat-sidenav #sidenav (keydown.escape)="close()" disableClose>
+    <p><button mat-button (click)="close()">Toggle</button></p>
+    <div fxLayout="column">
+      <a routerLink="/eleicao" (click)="close()">Cadastro</a>
+      <a routerLink="/login" (click)="close()">Login</a>
     </div>
-    <div class="example-flex"><router-outlet></router-outlet></div>
-  </mat-drawer-content>
-</mat-drawer-container>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <p><button mat-button (click)="sidenav.open()">Open</button></p>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

@@ -1,24 +1,45 @@
 /* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+  background: url('assets/img/bg.jpeg') no-repeat;
+  background-size: cover;
+  display: block;
+}
+
 $default-background-color: rgba(
   $color: #000000,
-  $alpha: 0.7
+  $alpha: 0.2
 );
 
-body {
-  // background: url("assets/background/bg.jpeg") no-repeat;
-  display: block;
-  background-size: cover;
+.mat-sidenav-container {
+  background-color: rgba($color: #000000, $alpha: 0.1);
 }
 p {
   color: white;
 }
-table {
+.mat-table {
   width: 100%;
   background-color: $default-background-color;
 }
-mat-card {
+.mat-paginator {
+  background-color: rgba($color: #000000, $alpha: 0.5);
+}
+.mat-card {
   background-color: $default-background-color;
 }
-mat-icon {
+.mat-icon {
   cursor: pointer;
+}
+.mat-cell,
+.mat-header-cell {
+  color: white;
+}
+.mat-button {
+  background-color: rgba($color: #000000, $alpha: 0.5);
 }
