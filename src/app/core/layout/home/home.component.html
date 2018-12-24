@@ -1,10 +1,6 @@
 <mat-sidenav-container class="example-container" (backdropClick)="close()">
   <mat-sidenav #sidenav (keydown.escape)="close()" disableClose>
-    <p><button mat-button (click)="close()">Toggle</button></p>
-    <div fxLayout="column">
-      <a routerLink="/eleicao" (click)="close()">Cadastro</a>
-      <a routerLink="/login" (click)="close()">Login</a>
-    </div>
+    <gla-menu (close)="close()"></gla-menu>
   </mat-sidenav>
 
   <mat-sidenav-content>

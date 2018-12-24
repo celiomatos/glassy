@@ -4,10 +4,9 @@ import { HomeComponent } from './home/home.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MenuComponent } from './menu/menu.component';
-import { SidenavComponent } from './sidenav/sidenav.component';
 
 @NgModule({
   imports: [CommonModule, RouterModule, MaterialModule],
-  declarations: [HomeComponent, SidenavComponent, MenuComponent]
+  declarations: [HomeComponent, MenuComponent]
 })
 export class LayoutModule {}

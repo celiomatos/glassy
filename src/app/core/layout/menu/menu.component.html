@@ -1,3 +1,5 @@
-<p>
-  menu works!
-</p>
+<p><button mat-button (click)="closeSideNav()">Toggle</button></p>
+<div fxLayout="column">
+  <a routerLink="/eleicao" (click)="closeSideNav()">Cadastro</a>
+  <a routerLink="/login" (click)="closeSideNav()">Login</a>
+</div>
