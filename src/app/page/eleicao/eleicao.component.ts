@@ -1,5 +1,11 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { MatPaginator, MatTableDataSource, MatSort } from '@angular/material';
+import {
+  MatPaginator,
+  MatTableDataSource,
+  MatSort,
+  MatDialog
+} from '@angular/material';
+import { EleicaoSearchComponent } from './eleicao-search/eleicao-search.component';
 
 export interface PeriodicElement {
   name: string;
@@ -42,7 +48,7 @@ export class EleicaoComponent implements OnInit {
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
 
-  constructor() {}
+  constructor(private dialog: MatDialog) {}
 
   ngOnInit() {
     this.dataSource.paginator = this.paginator;
@@ -53,5 +59,13 @@ export class EleicaoComponent implements OnInit {
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }
 
-  search() {}
+  search() {
+    const dialogRef = this.dialog.open(EleicaoSearchComponent, {
+      disableClose: true
+    });
+    dialogRef.afterClosed().subscribe(() => {
+      console.log('nada');
+      console.log(dialogRef.componentInstance.valor);
+    });
+  }
 }
